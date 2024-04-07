@@ -1,6 +1,6 @@
 import { Job, DoneCallback } from 'bull';
 import Logger from 'bunyan';
-import { config } from 'src/config';
+import { config } from '../config';
 import { postService } from 'src/services/database/post.service';
 
 

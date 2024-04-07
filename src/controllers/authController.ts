@@ -10,7 +10,7 @@ import { UploadApiErrorResponse } from 'cloudinary';
 import { uploads } from 'src/middlewares/cloudinary-upload';
 import { IResetPasswordParams, IUserDocument } from 'src/interfaces/user.interface';
 import jwt from 'jsonwebtoken';
-import { config } from 'src/config';
+import { config } from '../config';
 import { authService } from 'src/services/database/auth.service';
 import { authQueue } from 'src/queues/auth.queue';
 import { userQueue } from 'src/queues/user.queue';

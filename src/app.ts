@@ -1,18 +1,27 @@
 import express, { Express } from "express";
 import { BackendServer } from "./setupServer";
 import setupDb from "./setupDb";
+import { config } from "./config";
 
 class Application {
   public initialize(): void {
-    setupDb();
-    this.loadConfig();
-    const app: Express = express();
-    const server: BackendServer = new BackendServer(app);
-    server.start();
-    Application.handleExit();
+    try{
+      setupDb();
+      this.loadConfig();
+      const app: Express = express();
+      const server: BackendServer = new BackendServer(app);
+      server.start();
+      Application.handleExit();
+    }catch(error){
+      console.log(error);
+    }
+   
   }
 
-  private loadConfig(): void {}
+  private loadConfig(): void {
+    config.validateConfig();
+    config.cloudinaryConfig();
+  }
 
   private static handleExit(): void {
     process.on("uncaughtException", (error: Error) => {
@@ -31,7 +40,8 @@ class Application {
       Application.shutDownProperly(2);
     });
 
-    process.on("exit", () => {
+    process.on("exit", (error:Error) => {
+      console.log("e",error)
     });
   }
 

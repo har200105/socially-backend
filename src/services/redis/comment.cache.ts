@@ -1,6 +1,6 @@
 import Logger from 'bunyan';
 import { find } from 'lodash';
-import { config } from 'src/config';
+import { config } from '../../config';
 import { BaseCache } from './base.cache';
 import { Helpers } from 'src/helpers';
 import { ServerError } from 'src/middlewares/error-handler';

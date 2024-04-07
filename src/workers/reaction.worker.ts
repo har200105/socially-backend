@@ -1,6 +1,6 @@
 import { DoneCallback, Job } from 'bull';
 import Logger from 'bunyan';
-import { config } from 'src/config';
+import { config } from '../config';
 import { reactionService } from 'src/services/database/reaction.service';
 
 const log: Logger = config.createLogger('reactionWorker');

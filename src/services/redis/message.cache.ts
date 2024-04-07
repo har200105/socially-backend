@@ -1,6 +1,6 @@
 import Logger from 'bunyan';
 import { findIndex, find, filter, remove } from 'lodash';
-import { config } from 'src/config';
+import { config } from '../../config';
 import { BaseCache } from './base.cache';
 import { ServerError } from 'src/middlewares/error-handler';
 import { IChatList, IChatUsers, IGetMessageFromCache, IMessageData } from 'src/interfaces/chat.interface';

@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer';
 import Logger from 'bunyan';
-import { config } from 'src/config';
+import { config } from '../../config';
 import { BadRequestError } from 'src/middlewares/error-handler';
 
 

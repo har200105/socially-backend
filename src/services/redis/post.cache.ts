@@ -1,6 +1,6 @@
 import Logger from 'bunyan';
 import { RedisCommandRawReply } from '@redis/client/dist/lib/commands';
-import { config } from 'src/config';
+import { config } from '../../config';
 import { BaseCache } from './base.cache';
 import { IPostDocument, ISavePostToCache } from 'src/interfaces/post.interface';
 import { Helpers } from 'src/helpers';

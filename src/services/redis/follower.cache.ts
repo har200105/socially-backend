@@ -1,7 +1,7 @@
 import Logger from 'bunyan';
 import { remove } from 'lodash';
 import mongoose from 'mongoose';
-import { config } from 'src/config';
+import { config } from '../../config';
 import { UserCache } from './user.cache';
 import { BaseCache } from './base.cache';
 import { ServerError } from 'src/middlewares/error-handler';

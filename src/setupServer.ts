@@ -34,12 +34,17 @@ export class BackendServer {
   }
 
   public start(): void {
+    console.log("here");
+    try{
     this.securityMiddleware(this.app);
     this.standardMiddleware(this.app);
     this.routesMiddleware(this.app);
     this.apiMonitoring(this.app);
     this.globalErrorHandler(this.app);
     this.startServer(this.app);
+    }catch(error){
+      console.log(error);
+    }
   }
 
   private securityMiddleware(app: Application): void {

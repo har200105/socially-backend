@@ -1,7 +1,7 @@
 import Queue, { Job } from 'bull';
 import Logger from 'bunyan';
 import { ExpressAdapter, createBullBoard, BullAdapter } from '@bull-board/express';
-import { config } from 'src/config';
+import { config } from '../config';
 import { IAuthJob } from 'src/interfaces/auth.interface';
 import { IEmailJob, IUserJob } from 'src/interfaces/user.interface';
 import { IPostJobData } from 'src/interfaces/post.interface';

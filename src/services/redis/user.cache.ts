@@ -2,7 +2,7 @@ import Logger from 'bunyan';
 import { indexOf, findIndex } from 'lodash';
 
 import { RedisCommandRawReply } from '@redis/client/dist/lib/commands';
-import { config } from 'src/config';
+import { config } from '../../config';
 import { INotificationSettings, ISocialLinks, IUserDocument } from 'src/interfaces/user.interface';
 import { BaseCache } from './base.cache';
 import { Helpers } from 'src/helpers';
